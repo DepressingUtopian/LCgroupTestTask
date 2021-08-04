@@ -1,0 +1,50 @@
+<div class="table">
+  <div class="table__column">
+    <div class="table__column-item table__column-header">
+      <span>#</span>
+    </div>
+    <div class="table__column-item" *ngFor="let user of usersData">
+      <span>{{user.id}}</span>
+    </div>
+  </div>
+  <div class="table__column">
+    <div class="table__column-item table__column-header">
+      <span>Имя</span>
+    </div>
+    <div class="table__column-item" *ngFor="let user of usersData">
+      <span>{{user.name}}</span>
+    </div>
+  </div>
+  <div class="table__column">
+    <div class="table__column-item table__column-header">
+      <span>Возраст</span>
+    </div>
+    <div class="table__column-item" *ngFor="let user of usersData">
+      <span>{{user.age}}</span>
+    </div>
+  </div>
+  <div class="table__column">
+    <div class="table__column-item table__column-header">
+      <span>Пол</span>
+    </div>
+    <div class="table__column-item" *ngFor="let user of usersData">
+      <span>{{user.gender}}</span>
+    </div>
+  </div>
+  <div class="table__column">
+    <div class="table__column-item table__column-header">
+      <span>Департамент</span>
+    </div>
+    <div class="table__column-item" *ngFor="let user of usersData">
+      <span>{{user.department}}</span>
+    </div>
+  </div>
+  <div class="table__column">
+    <div class="table__column-item table__column-header">
+      <span>Адрес</span>
+    </div>
+    <div class="table__column-item" *ngFor="let user of usersData">
+      <span>{{user.address.city}}, {{user.address.street}}</span>
+    </div>
+  </div>
+</div>
