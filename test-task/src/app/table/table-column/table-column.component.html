@@ -1,0 +1,9 @@
+<div class="table__column-item table__column-header">
+    <span class="header-text">{{columnData?.header}}</span>
+    <button class="button sort-button" (click)="sortColumnByPropName()">
+      <div class="filter-icon" [class.desc]="isDesc"></div>
+    </button>
+</div>
+<div class="table__column-item" *ngFor="let item of columnContent">
+    <span class="text">{{item}}</span>
+</div>

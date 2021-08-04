@@ -1,0 +1,35 @@
+.table__column-header {
+  background: #f7f7f7;
+  color: #6d6c81;
+
+  .header-text {
+    margin-right: 1rem;
+  }
+}
+
+.table__column-item {
+  display: flex;
+  flex: 1 1;
+  box-sizing: border-box;
+  justify-content: start;
+  align-items: center;
+  min-height: 50px;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.6);
+  padding: 0 1vw;
+
+  &:first-child {
+    border: 0;
+  }
+
+  .sort-button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+}
+
+.desc {
+  transform: rotate(180deg);
+}

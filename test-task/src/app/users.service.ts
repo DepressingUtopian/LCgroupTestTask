@@ -14,6 +14,8 @@ export interface IUser {
   }
 }
 
+export type keysOfIUser = keyof IUser;
+
 @Injectable({
   providedIn: 'root'
 })
