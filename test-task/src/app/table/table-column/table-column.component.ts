@@ -10,11 +10,9 @@ export class TableColumnComponent implements OnInit, OnChanges {
 
   @Input() userName: string = "";
   @Input() data: IUser[] = [];
-  @Input() columnData: { propName: keysOfIUser, header: string } | null = null;
+  @Input() columnData: { propName: keysOfIUser, header: string, isDesc: boolean, isActive: boolean } | null = null;
 
-  @Output() onSort = new EventEmitter<{propName: keysOfIUser| undefined, isDesc: boolean}>();
-
-  @Input() isDesc: boolean = true;
+  @Output() onSort = new EventEmitter<{propName?: keysOfIUser}>();
   columnContent: string[] = [];
 
   constructor() { 
@@ -24,7 +22,6 @@ export class TableColumnComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log(this.isDesc);
     if(this.columnData && this.data) {
       this.columnContent = this.data.map((elem) => {
         if(this.columnData?.propName === "address") {
@@ -39,8 +36,6 @@ export class TableColumnComponent implements OnInit, OnChanges {
   }
 
   sortColumnByPropName() {
-    console.log(this.isDesc);
-    this.onSort && this.onSort.emit({propName: this.columnData?.propName, isDesc: this.isDesc});
-    this.isDesc = !this.isDesc;
+    this.onSort && this.onSort.emit({propName: this.columnData?.propName});
   }
 }

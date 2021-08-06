@@ -1,0 +1,34 @@
+.filter-button {
+  display: flex;
+  align-items: center;
+
+  background: #fdfdfd;
+  border: 1px solid rgba($color: #c2c2c3, $alpha: 0.6);
+  border-radius: 0.2vw;
+
+  color: #a4a7a9;
+  font-size: 1rem;
+  line-height: 1.1rem;
+
+  padding: 0.6rem 1rem;
+  margin-right: 1vw;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #222222;
+    border: 1px solid #c2c2c3;
+  }
+
+  &:focus {
+    border: 1px solid #2890e9;
+
+    .filter-icon {
+      filter: brightness(0.5) sepia(1) hue-rotate(184deg) saturate(5);
+    }
+  }
+
+  .filter-button__header {
+    margin-right: 1rem;
+  }
+}

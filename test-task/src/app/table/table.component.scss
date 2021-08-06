@@ -1,6 +1,11 @@
-.table {
+.table-wrapper {
   display: flex;
   margin: 0 auto;
+  flex-direction: column;
+}
+
+.table {
+  display: flex;
   box-sizing: border-box;
 
   .table__column {
@@ -14,7 +19,7 @@
 }
 
 @media screen and (min-width: 900px) {
-  .table {
+  .table-wrapper  {
     max-width: 1200px;
   }
 }

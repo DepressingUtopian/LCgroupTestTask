@@ -1,0 +1,9 @@
+<div class="filter-panel">
+  <app-filter-button 
+    *ngFor="let header of headers" 
+    [header]="header"
+    (onClick)="showTooltip($event)"
+    >
+  </app-filter-button>
+</div>
+<app-tooltip #tooltip *ngIf="isShowTooltip" [tooltipLeftOffset]="tooltipLeftOffset"></app-tooltip>

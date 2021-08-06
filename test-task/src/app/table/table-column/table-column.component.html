@@ -1,7 +1,7 @@
 <div class="table__column-item table__column-header">
-    <span class="header-text">{{columnData?.header}}</span>
+    <span class="header-text" [class.active]="columnData && columnData.isActive" >{{columnData?.header}}</span>
     <button class="button sort-button" (click)="sortColumnByPropName()">
-      <div class="filter-icon" [class.desc]="isDesc"></div>
+      <div [className]="(columnData && columnData.isDesc) ? 'down-arrow-icon' : 'up-arrow-icon' " [class.desc]="columnData && columnData.isDesc"></div>
     </button>
 </div>
 <div class="table__column-item" *ngFor="let item of columnContent">

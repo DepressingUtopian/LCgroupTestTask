@@ -1,10 +1,7 @@
-<div class="table">
-    <app-table-column 
-      class="table__column" 
-      *ngFor="let userPropName of usersPropsNames" 
-      [columnData]="userPropName" 
-      [data]="usersData"
-      (onSort)="sortUsersBy($event)"
-    >
-    </app-table-column>
+<div class="table-wrapper">
+    <app-filter-panel [filtersData]="filters"></app-filter-panel>
+    <div class="table">
+        <app-table-column class="table__column" *ngFor="let props of tableColumnProps" [columnData]="props" [data]="usersData" (onSort)="sortColumn($event)">
+        </app-table-column>
+    </div>
 </div>

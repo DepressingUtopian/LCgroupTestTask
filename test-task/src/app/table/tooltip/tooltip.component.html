@@ -1,0 +1,15 @@
+<div [style.left.px]="tooltipLeftOffset" class="tooltip">
+  <form class="tooltip-form form-group">
+    <div class="tooltip__item">
+      <div class="tooltip__item-header">{{formHeader}}</div>
+      <div class="tooltip__item-content">
+        <form class="form-group">
+          <div class="form-group__item" *ngFor="let option of formOptions">
+            <input type="checkbox" id="filter-checkbox" name="filter-checkbox" value="option.value">
+            <label for="filter-checkbox">{{option.key}}</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </form>
+</div>
